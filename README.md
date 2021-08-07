@@ -1,22 +1,26 @@
 # AWS Exposable Resources
 
+## Tools as seen at DEFCON29
+* [PMAPPER](https://github.com/nccgroup/PMapper) IAM mapper
+* [s3 scanner](https://github.com/netskopeoss/aws-s3-scanner)
+* [censys](https://censys.io/) amazing tool to evaluate attack surface of the cloud
+* [Riskiq](https://www.riskiq.com/illuminate-platform/) to track 
+* [Security trails](https://securitytrails.com/)
+* [Shhgit repo](https://github.com/eth0izzle/shhgit)
+* [gitwild](https://github.com/d1vious/git-wild-hunt) for secret discovery
+* Find domain 
+* [Amass](https://danielmiessler.com/study/amass/)
+* [Shodan](https://www.shodan.io/)
+* [Certstream](https://certstream.calidog.io/)
+* Google Dorking `site: http://s3.*.*AWS.amazon.com`
+
+## Purpose
 The goal of this repo is to maintain a list of all AWS resources that can be publicly exposed, and eventually, those that can be shared with untrusted accounts (that section is still in development and not included here yet).
 
 The following concepts are applied in this list:
 - Resources that could be indirectly exposed through another resource are not included. For example, CloudTrail logs can be sent to an S3 bucket that is public, but it is the S3 bucket that is misconfigured, so CloudTrail is not listed as a resource that can be made public.
 - Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy. For an EC2, you could create an EC2 with a public IP, but associate a restricted Security Group to it that perhaps later is opened up to allow public access. I view the creation of the EC2 with a public IP, and not the modification of the Securtiy Group to be the action of interest.
 
-## Tools
-* [PMAPPER](https://github.com/nccgroup/PMapper) IAM mapper
-* [censys](https://censys.io/) amazing tool to evaluate attack surface of the cloud
-* [Riskiq](https://www.riskiq.com/illuminate-platform/) to track 
-* [Security trails](https://securitytrails.com/)
-* [Shhgit repo](https://github.com/eth0izzle/shhgit) and [gitwild](https://github.com/d1vious/git-wild-hunt) for secret discovery
-* Find domain 
-* [Amass](https://danielmiessler.com/study/amass/)
-* [Shodan](https://www.shodan.io/)
-* [Certstream](https://certstream.calidog.io/)
-* Google Dorking `site: http://s3.*.*AWS.amazon.com'
 # Roadmap
 I would like this repo to eventually contain the following:
 - Sample CLI commands for creating both a private and public resource
