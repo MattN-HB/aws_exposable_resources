@@ -16,7 +16,7 @@ The following concepts are applied in this list:
 * [Amass](https://danielmiessler.com/study/amass/)
 * [Shodan](https://www.shodan.io/)
 * [Certstream](https://certstream.calidog.io/)
-
+* Google Dorking `site: http://s3.*.*AWS.amazon.com'
 # Roadmap
 I would like this repo to eventually contain the following:
 - Sample CLI commands for creating both a private and public resource
