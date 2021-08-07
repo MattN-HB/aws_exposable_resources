@@ -7,6 +7,7 @@ The following concepts are applied in this list:
 - Some resources may require multiple things configured a certain way to be considered public. For example, a Secrets Manager secret that is encrypted with a KMS, would need both the Secret and KMS key to be public for access to the Secret. For the purposes of this list, I consider the Secret resource policy only.  Similarly, for Managed ElasticSearch clusters, you need both the resource policy to allow public access, and for it to have a non-VPC IP. I consider only the resource policy. For an EC2, you could create an EC2 with a public IP, but associate a restricted Security Group to it that perhaps later is opened up to allow public access. I view the creation of the EC2 with a public IP, and not the modification of the Securtiy Group to be the action of interest.
 
 ## Tools
+* [PMAPPER](https://github.com/nccgroup/PMapper) IAM mapper
 * [censys](https://censys.io/) amazing tool to evaluate attack surface of the cloud
 * [Riskiq](https://www.riskiq.com/illuminate-platform/) to track 
 * [Security trails](https://securitytrails.com/)
