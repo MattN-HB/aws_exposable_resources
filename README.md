@@ -14,7 +14,7 @@
 * [Certstream](https://certstream.calidog.io/)
 * Google Dorking `site: http://s3.*.*AWS.amazon.com`
 
-## Purpose
+## Purpose [slides](https://www.slideshare.net/tenchisecurity/hunting-for-aws-exposed-resources)
 The goal of this repo is to maintain a list of all AWS resources that can be publicly exposed, and eventually, those that can be shared with untrusted accounts (that section is still in development and not included here yet).
 
 The following concepts are applied in this list:
