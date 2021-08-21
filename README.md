@@ -13,6 +13,7 @@
 * [Shodan](https://www.shodan.io/)
 * [Certstream](https://certstream.calidog.io/)
 * Google Dorking `site: http://s3.*.*AWS.amazon.com`
+* [Security reference cloud formation](https://github.com/aws-samples/aws-security-reference-architecture-examples)
 
 ## Purpose ([slides](https://www.slideshare.net/tenchisecurity/hunting-for-aws-exposed-resources))
 The goal of this repo is to maintain a list of all AWS resources that can be publicly exposed, and eventually, those that can be shared with untrusted accounts (that section is still in development and not included here yet).
